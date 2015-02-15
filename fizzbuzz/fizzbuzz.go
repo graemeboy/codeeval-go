@@ -24,8 +24,12 @@ func main() {
         n, err := strconv.Atoi(inArr[2])
         y, err1 := strconv.Atoi(inArr[1])
         x, err2 := strconv.Atoi(inArr[0])
-        if (err != nil || err1 != nil || err2 != nil) {
-            fmt.Printf("Found error.")
+        if (err != nil) {
+            fmt.Printf("Error parsing n")
+        } else if (err1 != nil) {
+            fmt.Printf("Error parsing y")
+        } else if (err2 != nil) {
+            fmt.Printf("Error parsing x")
         } else {
             do_fb(n, x, y)
         }
