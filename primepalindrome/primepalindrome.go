@@ -4,13 +4,13 @@ import "fmt"
 import "strconv"
 
 func main() {
-    lastPrimePalindrome := 0
-    for i := 0; i < 1000; i++ {
+    for i := 1000; i > 1; i-- {
         if isPalindrome(i) && isPrime(i) {
-            lastPrimePalindrome = i
+            fmt.Println(i)
+            break
         }
     }
-    fmt.Println(lastPrimePalindrome)
+    
 }
 
 func isPrime(n int) bool {
